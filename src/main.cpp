@@ -1636,7 +1636,7 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
                    nReward));
     }
 
-    if(IsProofOfWork())
+/*    if(IsProofOfWork())
     {
         CBitcoinAddress address(!fTestNet ? FOUNDATION : FOUNDATION_TEST);
         CScript scriptPubKey;
@@ -1645,7 +1645,7 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
             return error("ConnectBlock() : coinbase does not pay to the dev address)");
         if (vtx[0].vout[1].nValue < devCoin)
             return error("ConnectBlock() : coinbase does not pay enough to dev addresss");
-    }
+    }  */
 
     if (IsProofOfStake())
     {
